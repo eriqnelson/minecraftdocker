@@ -17,6 +17,9 @@ USER root
 # Creating user and adding server files
 RUN useradd -m -U minecraft && \
 	mkdir -p /minecraft/world
+
+#Keep your directory clean of any old zips, this will vacuum up anything.
+
 COPY *.zip /minecraft/minecraftserver.zip
 
 RUN	unzip minecraftserver.zip && \
@@ -36,6 +39,9 @@ EXPOSE 25565
 
 # Expose volume
 VOLUME ["/minecraft/world"]
+
+#Set MOTD
+ENV MOTD You probably forgot to update a mod.
 
 
 # Start server
