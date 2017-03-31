@@ -5,5 +5,4 @@ Rather than digging through the Curse CDN trying to find the wgettable direct do
 There are better dockerfiles out there if you're not building and rebuilding them twenty times in an afternoon.
 
 ## Run this container
-
-' docker run -d -p 25565:25565 --name mcdevserver '
+`docker run -d -p 25565:25565 --name mcdevserver`
